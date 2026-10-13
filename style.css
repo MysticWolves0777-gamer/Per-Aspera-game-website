@@ -1,0 +1,39 @@
+:root{
+  --ink:#14163a; --ink-2:#232766; --paper:#f4f2ff;
+  --sun:#ffd23f; --coral:#ff5d8f; --mint:#3ddbd9;
+  --safe-t:env(safe-area-inset-top,0px); --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{
+  background:var(--ink);color:var(--paper);
+  font-family:ui-rounded,"Arial Rounded MT Bold","Trebuchet MS",system-ui,sans-serif;
+  padding-top:var(--safe-t);padding-bottom:var(--safe-b);
+  overscroll-behavior:none;touch-action:manipulation;user-select:none;-webkit-user-select:none;
+}
+[hidden]{display:none!important}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 18px;
+  background:var(--sun);color:var(--ink);font-weight:700}
+button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+#hub{max-width:520px;margin:0 auto;padding:28px 20px 40px}
+h1{font-size:2.3rem;margin:0 0 6px;letter-spacing:-.02em}
+header p{margin:0 0 24px;opacity:.8}
+.games{display:grid;gap:14px}
+.card{display:flex;gap:16px;align-items:center;text-align:left;width:100%;
+  background:var(--ink-2);color:var(--paper);padding:16px;border-radius:20px}
+.card .ico{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-size:2rem;flex:none}
+.card h3{margin:0 0 4px;font-size:1.15rem}
+.card p{margin:0;font-size:.9rem;opacity:.75}
+.card small{display:block;margin-top:6px;color:var(--sun)}
+#install{margin-top:24px;width:100%;background:var(--mint)}
+#ios-tip{opacity:.8;font-size:.9rem}
+#stage{position:fixed;inset:0;padding-top:var(--safe-t);padding-bottom:var(--safe-b);display:flex;flex-direction:column;background:var(--ink)}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px}
+.bar button{padding:8px 14px;background:var(--ink-2);color:var(--paper)}
+#score{font-size:1.4rem;color:var(--sun);min-width:3ch;text-align:right}
+#canvas{flex:1;width:100%;min-height:0;touch-action:none}
+#overlay{position:absolute;inset:56px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;gap:10px;background:rgba(20,22,58,.88);padding:24px}
+#overlay h2{font-size:2rem;margin:0}
+#overlay p{margin:0 0 8px;opacity:.85;max-width:30ch}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

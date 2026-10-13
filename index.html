@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14163a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Pocket Arcade</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="hub">
+  <header>
+    <h1>Pocket Arcade</h1>
+    <p>Quick games that live on your phone. Works offline.</p>
+  </header>
+  <section id="games" class="games" aria-label="Games"></section>
+  <button id="install" hidden>Install on this phone</button>
+  <p id="ios-tip" hidden>On iPhone: tap Share, then Add to Home Screen.</p>
+</main>
+
+<section id="stage" hidden>
+  <div class="bar">
+    <button id="back" aria-label="Back to games">Back</button>
+    <strong id="title"></strong>
+    <span id="score">0</span>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div id="overlay">
+    <h2 id="ov-title"></h2>
+    <p id="ov-text"></p>
+    <button id="ov-btn">Play</button>
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
